@@ -1,29 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
+.hidden {
+    display: none;
 }
 
-.container {
-    max-width: 900px;
-    margin: 50px auto;
+#relatorio {
+    margin-top: 20px;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-h1 {
+#relatorio h2 {
     color: #007acc;
-    font-size: 2.5em;
+    margin-top: 0;
 }
 
-button {
+#relatorio button {
+    display: block;
+    margin: 10px auto 0;
     padding: 10px 20px;
-    margin: 10px;
     background-color: #007acc;
     color: white;
     border: none;
@@ -32,13 +29,6 @@ button {
     font-size: 1em;
 }
 
-button:hover {
+#relatorio button:hover {
     background-color: #005a99;
-}
-
-#resultados {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #555;
-    text-align: left;
 }
