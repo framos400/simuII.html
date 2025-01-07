@@ -12,15 +12,21 @@
         <h1>Simulação Global</h1>
         <div>
             <p>Ano Atual: <span id="ano">1</span></p>
+            <label for="anosPular">Avançar Anos:</label>
+            <input type="number" id="anosPular" value="1" min="1" />
             <button onclick="iniciarSimulacao()">Iniciar Simulação</button>
             <button onclick="gerarRelatorio('ano')">Relatório por Ano</button>
             <button onclick="gerarRelatorio('decada')">Relatório por Década</button>
             <button onclick="gerarRelatorio('seculo')">Relatório por Século</button>
-            <button onclick="gerarRelatorio('milenio')">Relatório por Milênio</button>
         </div>
         <div id="resultados">
             <h2>Informações do Ano</h2>
-            <!-- Resultados aparecerão aqui -->
+            <!-- Os resultados aparecerão aqui -->
+        </div>
+        <div id="relatorio" class="hidden">
+            <h2>Relatório</h2>
+            <div id="conteudoRelatorio"></div>
+            <button onclick="fecharRelatorio()">Fechar Relatório</button>
         </div>
     </div>
 </body>
