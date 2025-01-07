@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação Global</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulação Global</h1>
+        <div>
+            <p>Ano Atual: <span id="ano">1</span></p>
+            <button onclick="iniciarSimulacao()">Iniciar Simulação</button>
+            <button onclick="gerarRelatorio('ano')">Relatório por Ano</button>
+            <button onclick="gerarRelatorio('decada')">Relatório por Década</button>
+            <button onclick="gerarRelatorio('seculo')">Relatório por Século</button>
+            <button onclick="gerarRelatorio('milenio')">Relatório por Milênio</button>
+        </div>
+        <div id="resultados">
+            <h2>Informações do Ano</h2>
+            <!-- Resultados aparecerão aqui -->
+        </div>
+    </div>
+</body>
+</html>
