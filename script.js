@@ -8,7 +8,7 @@ const continentes = [
     { nome: "Oceania", populacao: 30000000, taxaCrescimento: 0.012, recursos: ["Turismo", "Minérios"] }
 ];
 
-const historico = []; // Guardar dados de cada ano para relatórios
+const historico = []; // Histórico de anos
 
 function iniciarSimulacao() {
     const anosPular = parseInt(document.getElementById("anosPular").value, 10) || 1;
@@ -19,9 +19,8 @@ function iniciarSimulacao() {
                 continente.populacao * (1 + continente.taxaCrescimento)
             );
         });
-        salvarAno(); // Salva os resultados do ano no histórico
+        salvarAno(); // Salva os dados do ano no histórico
     }
-
     document.getElementById("ano").innerText = anoAtual;
     atualizarResultados();
 }
@@ -50,7 +49,7 @@ function atualizarResultados() {
 function gerarRelatorio(tipo) {
     let anosParaMostrar = [];
     if (tipo === "ano") {
-        anosParaMostrar = historico.slice(-1); // Último ano
+        anosParaMostrar = historico.slice(-1); // Mostra o último ano
     } else if (tipo === "decada") {
         anosParaMostrar = historico.filter(h => h.ano % 10 === 0);
     } else if (tipo === "seculo") {
@@ -64,7 +63,7 @@ function gerarRelatorio(tipo) {
 
 function exibirRelatorio(anos) {
     const conteudoRelatorio = document.getElementById("conteudoRelatorio");
-    conteudoRelatorio.innerHTML = "";
+    conteudoRelatorio.innerHTML = ""; // Limpa o conteúdo anterior
 
     anos.forEach(dado => {
         conteudoRelatorio.innerHTML += `<h3>Ano: ${dado.ano}</h3>`;
